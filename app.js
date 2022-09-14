@@ -62,8 +62,8 @@ let MongoClient = require('mongodb').MongoClient
  MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("mydb");
-    var myquery = { address: "blabla" };
-    var newvalues = { $set: {name: "John", address: " Paradise St 7" } };
+    var myquery = { address: "Highway 37" };
+    var newvalues = { $set: {name: "John", address: "Paradise St 7" } };
     dbo.collection("customers").updateOne(myquery, newvalues, function(err, res) {
       if (err) throw err;
       console.log("1 document updated");
